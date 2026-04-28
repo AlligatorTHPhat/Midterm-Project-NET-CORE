@@ -1,0 +1,27 @@
+﻿@model IEnumerable<GiuaKyNetCore_Nhom6.Models.ThongKeNxbViewModel>
+
+@{
+    ViewData["Title"] = "Thống Kê Sách Theo NXB";
+}
+
+<h2 class="text-center mt-3">Thống kê sách theo nhà xuất bản</h2>
+
+<table class="table table-bordered table-striped mt-4">
+    <thead class="thead-dark">
+        <tr>
+            <th>Mã NXB</th>
+            <th>Tên Nhà Xuất Bản</th>
+            <th>Số Lượng Sách Đang Mượn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaNXB</td>
+                <td>@item.TenNXB</td>
+                <td>@item.SoLuongSachDangMuon</td>
+            </tr>
+        }
+    </tbody>
+</table>
